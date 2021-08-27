@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "autoname": "format:{organization_name} {reason_for_submittal} {####}",
+ "creation": "2021-08-21 07:33:21.701200",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "organization_name",
+  "email",
+  "customer_id",
+  "reason_for_submittal",
+  "explain_issue_in_detail",
+  "attach_image_if_applicable"
+ ],
+ "fields": [
+  {
+   "fieldname": "organization_name",
+   "fieldtype": "Data",
+   "label": "Organization Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "customer_id",
+   "fieldtype": "Data",
+   "label": "Customer ID"
+  },
+  {
+   "fieldname": "reason_for_submittal",
+   "fieldtype": "Select",
+   "label": "Reason for Submittal",
+   "options": "Bug\nNeed Customisation\nBilling Issue\nRequire Clarification on use"
+  },
+  {
+   "fieldname": "attach_image_if_applicable",
+   "fieldtype": "Attach Image",
+   "label": "Attach Image (if applicable)"
+  },
+  {
+   "fieldname": "explain_issue_in_detail",
+   "fieldtype": "Text",
+   "label": "Explain Issue in Detail"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-08-21 07:34:39.657824",
+ "modified_by": "Administrator",
+ "module": "CRM",
+ "name": "Support",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

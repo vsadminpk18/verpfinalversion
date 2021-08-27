@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "autoname": "format:Engagement Letter {client} {####}",
+ "creation": "2021-08-18 00:00:37.572400",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "html_1",
+  "client",
+  "date",
+  "agreement_date",
+  "section_break_5",
+  "html_4",
+  "section_break_6",
+  "html_7",
+  "html_8",
+  "html_9",
+  "fees",
+  "total",
+  "html_12",
+  "signature_13",
+  "html_14",
+  "datesign"
+ ],
+ "fields": [
+  {
+   "fieldname": "html_1",
+   "fieldtype": "HTML",
+   "options": "<h3>Vertex Consulting &amp; Compliance Group<br></h3>\n<h4>Engagement Letter</h4>"
+  },
+  {
+   "depends_on": "eval:frappe.user.has_role('System Manager')",
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Customer",
+   "print_hide": 1
+  },
+  {
+   "depends_on": "eval:frappe.user.has_role('System Manager')",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "html_4",
+   "fieldtype": "HTML"
+  },
+  {
+   "depends_on": "eval:frappe.user.has_role('System Manager')",
+   "fieldname": "agreement_date",
+   "fieldtype": "Date",
+   "label": "Agreement Date",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "html_7",
+   "fieldtype": "HTML",
+   "options": "<h5>VERTEX PERFORMANCE ADVISORS ENGAGEMENT CONTRACT <br><br></h5>\n<h5>1 Scope<br></h5>\n<p>1.1. The scope of our engagement will include: <br></p>\n<p>(a) Accounting</p>\n<ul>\n<li>Payroll &amp; Bookkeeping for FY21</li>\n</ul>\n<p>(b) Tax Compliance</p>\n<ul>\n<li>Lodge quarterly BAS</li>\n<li>Lodge annual tax return</li>\n<li>Tax adjustments</li>\n<li>Liaison with ATO as needed</li>\n</ul>\n<p>1.2 Our advice will cover Income Tax and Goods &amp; Services Tax.<br><br>1.3 The scope of our engagement will be limited to performance of the services listed above.<br><br>1.4 The scope of our engagement will exclude the following:<br>(a) Financial Planning<br>(b) Tax Planning<br>(c) Preparation of financial statements<br><br>1.5 If the scope does not meet your requirements or you would like to discuss the scope with us further, please let us know.<br><br>1.6 We consider that we have the necessary expertise to perform the services covered by our engagement.  However, any changes to the scope of our engagement may require us to reconsider the terms of our engagement and/or make new arrangements with you</p>\n"
+  },
+  {
+   "fieldname": "html_8",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "html_9",
+   "fieldtype": "HTML",
+   "options": "<h5><br><br>2 Team<br><br></h5>\n<p>The following persons will be engaged on your matter:<br>    Hammad Rana - Partner<br>    Zameer uddin \u2013 Senior Partner<br>    Maaz Mohammad \u2013 Graduate Accountant<br><br>Please note that other personnel may be used on this engagement as and \nwhere appropriate.<br><br><br>2.2 Our Partners\n<br><br>VPA engages below partners to offer our clients one-stop solution to their business financial needs. All the engagement is conducted by VPA on behalf of the client. List of partners are listed below. They are selected based on their experience and qualification<br></p>\n<ul>\n<li>Tax Cube Pty Ltd</li>\n<li>EEasy Tax Pty Ltd</li>\n<li>Agile Financial Solutions</li>\n<li>Orange Financial Solutions</li>\n</ul>\n<h5><br><br><br>3 Your disclosure and record keeping obligations<br><br></h5>\n<p>3.1 You are required by law to keep full and accurate records relating to your tax affairs.<br><br>3.2 It is your obligation to provide us with all information that you reasonably expect will be necessary to allow us to perform work contemplated under this engagement within a timely manner or as requested. This includes providing accurate and complete responses to questions asked of you by us within 2 weeks.  Inaccurate, incomplete, or late information could have a material effect on our services and/or our conclusions and may result in additional fees. We will not verify the underlying accuracy or completeness of information you provide to us.<br><br>3.3 You are also required to advise us on a timely basis if there are any changes to your circumstances that may be relevant to the performance of our services.  Specifically, if any subsequent event results in the information you provided to us being inaccurate, incomplete, or misleading, then you are obliged to advise us as soon as possible.  We take no responsibility to the extent that our advice is inaccurate, incomplete or misleading because it is based on inaccurate, incomplete or misleading information being provided to us.<br><br>3.4 By accepting the terms of this letter, you will be taken to have agreed that the performance of our services is dependent on the performance of your obligations relating to disclosure and record keeping.<br><br>3.5 The Taxation Administration Act 1953 contains specific provisions that may provide you with \u201csafe harbours\u201d from administrative penalties for incorrect or late lodgement of returns if, amongst other things, you give us \u201call relevant taxation information\u201d in a timely manner (the safe harbour provisions apply from 1 March 2010).  Accordingly, it is to your advantage that all relevant information is disclosed to us as any failure by you to provide this information may affect your ability to rely on the \u201csafe harbour\u201d provisions and will be taken into account in determining the extent to which we have discharged our obligations to you.<br><br>3.6 You are also required to advise us if you become aware of any conflict of interest or potential conflict of interest.  Generally, a conflict of interest is any event which may result in us becoming unable to remain objective in the performance of our services to you. Some examples of events which could give rise to a conflict of interest or potential conflict of interest during this engagement are changes to your business circumstances, events affecting your family (e.g. death and/or marriage breakdown) or a legal action commencing against you.<br><br><br></p>\n<h5>4 Your rights and obligations under the taxation laws</h5>\n<p><br>4.1 You have certain rights under the taxation laws, including the right to seek a private ruling from the Australian Taxation Office (ATO) or to appeal or object against a decision made by the Commissioner. As relevant, we will provide further information to you concerning your rights under the Australian taxation laws during the conduct of the engagement contemplated by this letter.<br><br>4.2 You also have certain obligations under the Australian taxation laws, such as the obligation to keep proper records and the obligation to lodge returns by the due date.<br><br>4.3 As part of our services, we will keep you informed of any specific rights and obligations that may arise for you under the Australian taxation laws.<br><br><br></p>\n<h5>5 Trust Account<br><br></h5>\n<p>5.1 We maintain a separate trust account for dealing with all money and property received from you or on your behalf, except for amounts received from you in payment of our fees. We may apply these funds in payment of our bill with your written authorization.<br><br><br></p>\n<h5>6 Our obligation to comply with the law<br><br></h5>\n<p>6.1 We have a duty to act in your best interests. However, the duty to act in your best interests is subject to an overriding obligation to comply with the law even if that may require us to act in a manner that may be contrary to your interests.  For example, we could not lodge an income tax return for you that we knew to be false in a material respect.<br><br>We also have an obligation to ensure that we manage conflicts of interest as they arise. In this regard, we have arrangements in place to ensure that we manage potential or actual conflicts of interest. The effective operation of these arrangements depends, in part, on you complying with your obligation to disclose any potential conflicts of interest to us (see section 3 above).\nUnless otherwise stated, this opinion is based on the Australian tax law in force and the practice of the Australian Taxation Office (the ATO) applicable as at the date of this letter. <br><br>Our advice and/or services will be based on Australian taxation law in force at the date of the provision of the advice and/or services.  It is your responsibility to seek updated advice if you intend to rely on our advice at a later stage.  We note that Australian taxation laws are often subject to frequent change and our advice will not be updated unless specifically requested by you at the time of the change in law or announced change in law. </p><h5><br><br><br>7 Confidentiality</h5><p><br>We will not disclose any information relating to your affairs to any third party without your consent, unless required by law.  You may provide us with permission to disclose your confidential information in certain circumstances, or place conditions on the disclosure of certain confidential information.  If you do so, we will have permission to disclose the relevant information accordingly, in the performance of our services, unless you instruct us otherwise in writing.</p><h5><br><br><br>8 Fees<br><br></h5><p>8.1 We charge by reference to the time we spend on your matter. Fees for the work carried out by the team will be as follows:</p>\n\n\n\n\n\n"
+  },
+  {
+   "fieldname": "fees",
+   "fieldtype": "Table",
+   "options": "Engagement Letter Fees"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "html_12",
+   "fieldtype": "HTML",
+   "options": "<p>8.2 These rates may change from time to time. The new rates will apply from the date of the change. We will notify you if rates are changed.<br><br>8.3 The actual fees and rates charged by us reflect the seniority, expertise and experience of the persons involved, as well as factors such as the time frame in which this work is to be carried out, the particular nature of the retainer and the complexity and risks of the matter.<br><br>8.4 As you may appreciate, it is difficult to predict our costs for this matter given that our estimates depend on the nature and complexity of the matter and any taxation issues that arise.<br><br>8.5 We note that these estimates are based on our current instructions.  If we become aware that the above estimates will change, or your instructions or other circumstances change, we will contact you as soon as practicable to discuss a new quote.<br><br><br></p>\n<h5> 9 Limitation of Liability <br><br></h5>\n<p>9.1 Our liability may be limited by a scheme approved under Professional Standards Legislation. Further information on schemes is available from the Professional Standards Council \u2013 http://www.professionalstandardscouncil.gov.au/<br><br><br></p>\n<h5>Ownership of documents<br><br></h5>\n<p>10.1 All original documents obtained from you arising from this engagement will remain your property. However, we reserve the right to make a reasonable number of copies of the original documents for our records.<br><br>Our engagement will result in the production of the copies of Income Tax Returns prepared for the entities, both in hard and soft copies. Ownership of these documents will vest in you. All other documents produced by us in respect of this engagement will remain our property.<br><br>We have a policy of exploring a legal right of lien over any of your documents in our possession in the event of a dispute between us. We have also established dispute resolution processes, details of which are available on request.<br><br><br></p>\n<h5>11 Timetable <br><br></h5>\n<p>Our services will be performed in accordance with a timetable agreed with you.<br><br><br></p>\n<h5>Your acceptance of these terms<br><br></h5>\n<p>12.1 This letter sets out the basis on which we will act for you.  Please sign the letter where indicated and return a copy of the signed letter to us to indicate your acceptance of its terms.<br><br>If you wish to discuss any of the terms of this letter, please contact Hammad Rana. We look forward to working with you.\n<br><br>Acceptance of our services in conjunction with this information brochure indicates that you understand and accept the arrangements. This information will be effective for future engagements unless we advise you of any change.<br><br></p>\n<h4>CONFIRMATION OF ACCEPTANCE<br></h4>\n<p>I have read and accept the terms of engagement.</p>\n\n\n\n\n\n\n"
+  },
+  {
+   "fieldname": "signature_13",
+   "fieldtype": "Signature"
+  },
+  {
+   "fieldname": "html_14",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "datesign",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-08-21 09:52:52.223621",
+ "modified_by": "Administrator",
+ "module": "CRM",
+ "name": "Engagement Letter",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,26 @@
+{
+ "allow_roles": [
+  {
+   "role": "Auditor"
+  }
+ ],
+ "creation": "2021-08-26 15:36:47.006520",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "T",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2021-08-26 15:36:47.006520",
+ "modified_by": "Administrator",
+ "module": "Accounts",
+ "name": "T",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "Setup Taxes"
+  }
+ ],
+ "subtitle": "T",
+ "success_message": "T",
+ "title": "T"
+}

@@ -1,0 +1,13 @@
+#page-welcome-to-verp ul li {
+	margin: 7px 0px;
+}
+
+#page-welcome-to-verp .video-placeholder-image {
+	width: 100%;
+	cursor: pointer;
+}
+
+#page-welcome-to-verp .youtube-icon {
+	width: 10%;
+	cursor: pointer;
+}

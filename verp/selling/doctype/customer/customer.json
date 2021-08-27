@@ -1,0 +1,972 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2013-06-11 14:26:44",
+ "description": "Buyer of Goods and Services.",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "services_status_section",
+  "s1",
+  "s2",
+  "s3",
+  "s4",
+  "update_bookkeeping",
+  "column_break_6",
+  "st1",
+  "st2",
+  "st3",
+  "st4",
+  "update_payroll",
+  "column_break_11",
+  "for",
+  "ffn",
+  "fq1",
+  "fq2",
+  "update_bas",
+  "column_break_16",
+  "y1",
+  "y2",
+  "y3",
+  "y4",
+  "update_super",
+  "section_break_22",
+  "bookkeeping_history",
+  "migrate_bookkeeping",
+  "payroll_history",
+  "bas_history",
+  "super_history",
+  "basic_info",
+  "naming_series",
+  "salutation",
+  "customer_name",
+  "gender",
+  "customer_type",
+  "pan",
+  "tax_file_number",
+  "tax_withholding_category",
+  "default_bank_account",
+  "lead_name",
+  "image",
+  "column_break0",
+  "account_manager",
+  "customer_group",
+  "tax_id",
+  "asic_corporate_key",
+  "territory",
+  "tax_category",
+  "so_required",
+  "dn_required",
+  "disabled",
+  "is_internal_customer",
+  "represents_company",
+  "allowed_to_transact_section",
+  "companies",
+  "currency_and_price_list",
+  "default_currency",
+  "bookkeeping",
+  "payroll",
+  "stp_review",
+  "superannuation_lodgement",
+  "bas",
+  "column_break_14",
+  "ias",
+  "annual_tax_return",
+  "business_advisory",
+  "tax_planning",
+  "accounts_receiveable",
+  "default_price_list",
+  "address_contacts",
+  "address_html",
+  "website",
+  "column_break1",
+  "contact_html",
+  "primary_address_and_contact_detail",
+  "customer_primary_contact",
+  "mobile_no",
+  "email_id",
+  "column_break_26",
+  "customer_primary_address",
+  "primary_address",
+  "default_receivable_accounts",
+  "accounts",
+  "credit_limit_section",
+  "payment_terms",
+  "credit_limits",
+  "more_info",
+  "customer_details",
+  "column_break_45",
+  "market_segment",
+  "industry",
+  "language",
+  "client_level",
+  "is_frozen",
+  "column_break_38",
+  "loyalty_program",
+  "loyalty_program_tier",
+  "sales_team_section_break",
+  "default_sales_partner",
+  "default_commission_rate",
+  "sales_team_section",
+  "sales_team",
+  "customer_pos_id",
+  "status_bookkeeping",
+  "status_payroll",
+  "status_super_lodgement",
+  "status_bas_lodgement"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_info",
+   "fieldtype": "Section Break",
+   "label": "Name and Type",
+   "oldfieldtype": "Section Break",
+   "options": "fa fa-user"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "CUST-.YYYY.-",
+   "set_only_once": 1
+  },
+  {
+   "depends_on": "eval:doc.customer_type!='Company'",
+   "fieldname": "salutation",
+   "fieldtype": "Link",
+   "label": "Salutation",
+   "options": "Salutation"
+  },
+  {
+   "bold": 1,
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "Full Name",
+   "no_copy": 1,
+   "oldfieldname": "customer_name",
+   "oldfieldtype": "Data",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.customer_type != 'Company'",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "default": "Company",
+   "fieldname": "customer_type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "oldfieldname": "customer_type",
+   "oldfieldtype": "Select",
+   "options": "Company\nIndividual",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_bank_account",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Default Company Bank Account",
+   "options": "Bank Account",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "lead_name",
+   "fieldtype": "Link",
+   "label": "From Lead",
+   "no_copy": 1,
+   "oldfieldname": "lead_name",
+   "oldfieldtype": "Link",
+   "options": "Lead",
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Image",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "column_break0",
+   "fieldtype": "Column Break",
+   "width": "50%"
+  },
+  {
+   "fieldname": "account_manager",
+   "fieldtype": "Link",
+   "label": "Account Manager",
+   "options": "User"
+  },
+  {
+   "fieldname": "customer_group",
+   "fieldtype": "Link",
+   "label": "Customer Group",
+   "oldfieldname": "customer_group",
+   "oldfieldtype": "Link",
+   "options": "Customer Group",
+   "reqd": 1
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "oldfieldname": "territory",
+   "oldfieldtype": "Link",
+   "options": "Territory",
+   "print_hide": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "tax_id",
+   "fieldtype": "Data",
+   "label": "A.C.N"
+  },
+  {
+   "fieldname": "tax_category",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Tax Category",
+   "options": "Tax Category",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Disabled",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_internal_customer",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Internal Customer",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "is_internal_customer",
+   "fieldname": "represents_company",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Represents Company",
+   "options": "Company",
+   "unique": 1
+  },
+  {
+   "depends_on": "represents_company",
+   "fieldname": "allowed_to_transact_section",
+   "fieldtype": "Section Break",
+   "label": "Allowed To Transact With"
+  },
+  {
+   "depends_on": "represents_company",
+   "fieldname": "companies",
+   "fieldtype": "Table",
+   "label": "Allowed To Transact With",
+   "options": "Allowed To Transact With"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "currency_and_price_list",
+   "fieldtype": "Section Break",
+   "label": "Services Offered:"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "ignore_user_permissions": 1,
+   "label": "Billing Currency",
+   "no_copy": 1,
+   "options": "Currency",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "default_price_list",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "ignore_user_permissions": 1,
+   "label": "Default Price List",
+   "options": "Price List",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "en",
+   "fieldname": "language",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Print Language",
+   "options": "Language",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "depends_on": "eval:!doc.__islocal",
+   "fieldname": "address_contacts",
+   "fieldtype": "Section Break",
+   "label": "Address and Contact",
+   "options": "fa fa-map-marker"
+  },
+  {
+   "fieldname": "address_html",
+   "fieldtype": "HTML",
+   "label": "Address HTML",
+   "read_only": 1
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "column_break1",
+   "fieldtype": "Column Break",
+   "width": "50%"
+  },
+  {
+   "fieldname": "contact_html",
+   "fieldtype": "HTML",
+   "label": "Contact HTML",
+   "oldfieldtype": "HTML",
+   "read_only": 1
+  },
+  {
+   "description": "Select, to make the customer searchable with these fields",
+   "fieldname": "primary_address_and_contact_detail",
+   "fieldtype": "Section Break",
+   "label": "Primary Address and Contact Detail"
+  },
+  {
+   "description": "Reselect, if the chosen contact is edited after save",
+   "fieldname": "customer_primary_contact",
+   "fieldtype": "Link",
+   "label": "Customer Primary Contact",
+   "options": "Contact"
+  },
+  {
+   "fetch_from": "customer_primary_contact.mobile_no",
+   "fieldname": "mobile_no",
+   "fieldtype": "Read Only",
+   "label": "Mobile No"
+  },
+  {
+   "fetch_from": "customer_primary_contact.email_id",
+   "fieldname": "email_id",
+   "fieldtype": "Read Only",
+   "label": "Email Id"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Reselect, if the chosen address is edited after save",
+   "fieldname": "customer_primary_address",
+   "fieldtype": "Link",
+   "label": "Customer Primary Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "primary_address",
+   "fieldtype": "Text",
+   "label": "Primary Address",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "default_receivable_accounts",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Accounting",
+   "print_hide": 1
+  },
+  {
+   "description": "Mention if non-standard receivable account",
+   "fieldname": "accounts",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Accounts",
+   "options": "Party Account",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "credit_limit_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "hide_border": 1,
+   "label": "Credit Limit and Payment Terms",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "payment_terms",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Default Payment Terms Template",
+   "options": "Payment Terms Template",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "collapsible": 1,
+   "collapsible_depends_on": "customer_details",
+   "fieldname": "more_info",
+   "fieldtype": "Section Break",
+   "label": "More Information",
+   "oldfieldtype": "Section Break",
+   "options": "fa fa-file-text"
+  },
+  {
+   "description": "Additional information regarding the customer.",
+   "fieldname": "customer_details",
+   "fieldtype": "Text",
+   "label": "Customer Details",
+   "oldfieldname": "customer_details",
+   "oldfieldtype": "Code"
+  },
+  {
+   "fieldname": "column_break_45",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "market_segment",
+   "fieldtype": "Link",
+   "label": "Market Segment",
+   "options": "Market Segment"
+  },
+  {
+   "fieldname": "industry",
+   "fieldtype": "Link",
+   "label": "Industry",
+   "options": "Industry Type"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_frozen",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Frozen",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "column_break_38",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "hide_border": 1,
+   "label": "Loyalty Points",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "loyalty_program",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Loyalty Program",
+   "no_copy": 1,
+   "options": "Loyalty Program",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "loyalty_program_tier",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Loyalty Program Tier",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "collapsible": 1,
+   "collapsible_depends_on": "default_sales_partner",
+   "fieldname": "sales_team_section_break",
+   "fieldtype": "Section Break",
+   "label": "Sales Partner and Commission",
+   "oldfieldtype": "Section Break",
+   "options": "fa fa-group"
+  },
+  {
+   "fieldname": "default_sales_partner",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Sales Partner",
+   "oldfieldname": "default_sales_partner",
+   "oldfieldtype": "Link",
+   "options": "Sales Partner"
+  },
+  {
+   "fieldname": "default_commission_rate",
+   "fieldtype": "Float",
+   "label": "Commission Rate",
+   "oldfieldname": "default_commission_rate",
+   "oldfieldtype": "Currency"
+  },
+  {
+   "collapsible": 1,
+   "collapsible_depends_on": "sales_team",
+   "fieldname": "sales_team_section",
+   "fieldtype": "Section Break",
+   "label": "Sales Team"
+  },
+  {
+   "fieldname": "sales_team",
+   "fieldtype": "Table",
+   "label": "Sales Team Details",
+   "oldfieldname": "sales_team",
+   "oldfieldtype": "Table",
+   "options": "Sales Team"
+  },
+  {
+   "fieldname": "customer_pos_id",
+   "fieldtype": "Data",
+   "label": "Customer POS id",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "credit_limits",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Credit Limit",
+   "options": "Customer Credit Limit",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "so_required",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Allow Sales Invoice Creation Without Sales Order",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "dn_required",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Allow Sales Invoice Creation Without Delivery Note",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "pan",
+   "fieldtype": "Data",
+   "label": "ABN"
+  },
+  {
+   "fieldname": "tax_withholding_category",
+   "fieldtype": "Link",
+   "label": "Tax Withholding Category",
+   "options": "Tax Withholding Category"
+  },
+  {
+   "fieldname": "tax_file_number",
+   "fieldtype": "Data",
+   "label": "Tax File Number"
+  },
+  {
+   "fieldname": "asic_corporate_key",
+   "fieldtype": "Data",
+   "label": "ASIC Corporate Key"
+  },
+  {
+   "default": "0",
+   "fieldname": "bookkeeping",
+   "fieldtype": "Check",
+   "label": "Bookkeeping"
+  },
+  {
+   "default": "0",
+   "fieldname": "payroll",
+   "fieldtype": "Check",
+   "label": "Payroll"
+  },
+  {
+   "default": "0",
+   "fieldname": "stp_review",
+   "fieldtype": "Check",
+   "label": "STP Review"
+  },
+  {
+   "default": "0",
+   "fieldname": "superannuation_lodgement",
+   "fieldtype": "Check",
+   "label": "Superannuation Lodgement"
+  },
+  {
+   "default": "0",
+   "fieldname": "bas",
+   "fieldtype": "Check",
+   "label": "BAS"
+  },
+  {
+   "default": "0",
+   "fieldname": "ias",
+   "fieldtype": "Check",
+   "label": "IAS"
+  },
+  {
+   "default": "0",
+   "fieldname": "annual_tax_return",
+   "fieldtype": "Check",
+   "label": "Annual Tax Return"
+  },
+  {
+   "default": "0",
+   "fieldname": "business_advisory",
+   "fieldtype": "Check",
+   "label": "Business Advisory"
+  },
+  {
+   "default": "0",
+   "fieldname": "tax_planning",
+   "fieldtype": "Check",
+   "label": "Tax Planning"
+  },
+  {
+   "default": "0",
+   "fieldname": "accounts_receiveable",
+   "fieldtype": "Check",
+   "label": "Accounts Receiveable"
+  },
+  {
+   "fieldname": "client_level",
+   "fieldtype": "Select",
+   "label": "Client Level",
+   "options": "Silver\nGold\nPlatinum\nDiamond"
+  },
+  {
+   "fieldname": "status_bookkeeping",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status Bookkeeping",
+   "options": "Incomplete\nCompleted",
+   "search_index": 1
+  },
+  {
+   "fieldname": "status_payroll",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status Payroll",
+   "options": "Incomplete\nCompleted",
+   "search_index": 1
+  },
+  {
+   "fieldname": "status_super_lodgement",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status Super Lodgement",
+   "options": "Incomplete\nCompleted",
+   "search_index": 1
+  },
+  {
+   "fieldname": "status_bas_lodgement",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status Bas Lodgement",
+   "options": "Incomplete\nCompleted",
+   "search_index": 1
+  },
+  {
+   "fieldname": "services_status_section",
+   "fieldtype": "Section Break",
+   "label": "Services Status"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "for",
+   "fieldtype": "Select",
+   "label": "For",
+   "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
+  },
+  {
+   "fieldname": "ffn",
+   "fieldtype": "Data",
+   "label": "For Fortnight No:"
+  },
+  {
+   "fieldname": "fq1",
+   "fieldtype": "Select",
+   "label": "For Quarter",
+   "options": "First\nSecond\nThird\nFourth"
+  },
+  {
+   "fieldname": "fq2",
+   "fieldtype": "Select",
+   "label": "For Quarter",
+   "options": "First\nSecond\nThird\nFourth"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "y1",
+   "fieldtype": "Data",
+   "label": "Year"
+  },
+  {
+   "fieldname": "y2",
+   "fieldtype": "Data",
+   "label": "Year"
+  },
+  {
+   "fieldname": "y3",
+   "fieldtype": "Data",
+   "label": "Year"
+  },
+  {
+   "fieldname": "y4",
+   "fieldtype": "Data",
+   "label": "Year"
+  },
+  {
+   "default": "Bookkeeping",
+   "fieldname": "s1",
+   "fieldtype": "Data",
+   "label": "Service",
+   "read_only": 1
+  },
+  {
+   "default": "Payroll",
+   "fieldname": "s2",
+   "fieldtype": "Data",
+   "label": "Service",
+   "read_only": 1
+  },
+  {
+   "default": "BAS",
+   "fieldname": "s3",
+   "fieldtype": "Data",
+   "label": "Service",
+   "read_only": 1
+  },
+  {
+   "default": "Super",
+   "fieldname": "s4",
+   "fieldtype": "Data",
+   "label": "Service",
+   "read_only": 1
+  },
+  {
+   "fieldname": "st1",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Completed\nIncomplete"
+  },
+  {
+   "fieldname": "st2",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Completed\nIncomplete"
+  },
+  {
+   "fieldname": "st3",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Completed\nIncomplete"
+  },
+  {
+   "fieldname": "st4",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Completed\nIncomplete"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break",
+   "label": "Services History"
+  },
+  {
+   "fieldname": "bookkeeping_history",
+   "fieldtype": "Table",
+   "label": "Bookkeeping History",
+   "options": "Customer Services Child"
+  },
+  {
+   "fieldname": "payroll_history",
+   "fieldtype": "Table",
+   "label": "Payroll History",
+   "options": "Customer Services Child"
+  },
+  {
+   "fieldname": "bas_history",
+   "fieldtype": "Table",
+   "label": "BAS History",
+   "options": "Customer Services Child"
+  },
+  {
+   "fieldname": "super_history",
+   "fieldtype": "Table",
+   "label": "Super History",
+   "options": "Customer Services Child"
+  },
+  {
+   "fieldname": "update_bookkeeping",
+   "fieldtype": "Button",
+   "label": "Update Bookkeeping"
+  },
+  {
+   "fieldname": "update_payroll",
+   "fieldtype": "Button",
+   "label": "Update Payroll"
+  },
+  {
+   "fieldname": "update_bas",
+   "fieldtype": "Button",
+   "label": "Update BAS"
+  },
+  {
+   "fieldname": "update_super",
+   "fieldtype": "Button",
+   "label": "Update Super"
+  },
+  {
+   "fieldname": "migrate_bookkeeping",
+   "fieldtype": "Button",
+   "label": "Migrate Bookkeeping"
+  }
+ ],
+ "icon": "fa fa-user",
+ "idx": 363,
+ "image_field": "image",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-08-23 10:34:24.203306",
+ "modified_by": "Administrator",
+ "module": "Selling",
+ "name": "Customer",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "Sales User"
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Master Manager",
+   "set_user_permissions": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "Sales Master Manager",
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User"
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Manager"
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User"
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager"
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "customer_name,customer_group,territory, mobile_no,primary_address",
+ "show_name_in_global_search": 1,
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "title_field": "customer_name",
+ "track_changes": 1
+}

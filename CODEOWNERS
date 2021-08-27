@@ -1,0 +1,35 @@
+# Each line is a file pattern followed by one or more owners.
+
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+
+verp/accounts/               @nextchamp-saqib @deepeshgarg007
+verp/assets/                 @nextchamp-saqib @deepeshgarg007
+verp/verp_integrations/   @nextchamp-saqib
+verp/loan_management/        @nextchamp-saqib @deepeshgarg007
+verp/regional                @nextchamp-saqib @deepeshgarg007
+verp/selling                 @nextchamp-saqib @deepeshgarg007
+verp/support/                @nextchamp-saqib @deepeshgarg007
+pos*                            @nextchamp-saqib
+
+verp/buying/                 @marination @rohitwaghchaure @ankush
+verp/e_commerce/             @marination
+verp/maintenance/            @marination @rohitwaghchaure
+verp/manufacturing/          @marination @rohitwaghchaure @ankush
+verp/portal/                 @marination
+verp/quality_management/     @marination @rohitwaghchaure
+verp/shopping_cart/          @marination
+verp/stock/                  @marination @rohitwaghchaure @ankush
+
+verp/crm/                    @ruchamahabal
+verp/education/              @ruchamahabal
+verp/healthcare/             @ruchamahabal
+verp/hr/                     @ruchamahabal
+verp/non_profit/             @ruchamahabal
+verp/payroll                 @ruchamahabal
+verp/projects/               @ruchamahabal
+
+verp/controllers             @deepeshgarg007 @nextchamp-saqib @rohitwaghchaure @marination
+
+.github/                        @surajshetty3416 @ankush
+requirements.txt                @gavindsouza

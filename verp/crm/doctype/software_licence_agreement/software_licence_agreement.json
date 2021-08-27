@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "autoname": "format:Software Licence Agreement {client} {####}",
+ "creation": "2021-08-21 07:38:19.147771",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "html_1",
+  "customer",
+  "client",
+  "date",
+  "agreement_date",
+  "section_break_6",
+  "html_5",
+  "html_6",
+  "html_7",
+  "section_break_8",
+  "html_9",
+  "signature_10",
+  "column_break_11",
+  "html_12",
+  "signature_13"
+ ],
+ "fields": [
+  {
+   "fieldname": "html_1",
+   "fieldtype": "HTML",
+   "options": "<h3>Vertex Consulting &amp; Compliance Group<br></h3>\n<h4>Software Licence Agreement</h4>"
+  },
+  {
+   "depends_on": "eval:frappe.user.has_role('System Manager')",
+   "fieldname": "client",
+   "fieldtype": "Data",
+   "label": "Client Legal Designation",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "depends_on": "eval:frappe.user.has_role('System Manager')",
+   "fieldname": "agreement_date",
+   "fieldtype": "Date",
+   "label": "Agreement Date",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "html_5",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "html_6",
+   "fieldtype": "HTML",
+   "options": "<p><strong>BACKGROUND:&nbsp;</strong></p>\n<p><span style=\"font-weight: 400;\">The Vendor wishes to licence computer software to the Licensee and the Licensee desires to purchase the&nbsp; software licence under the terms and conditions stated below.&nbsp;&nbsp;</span></p>\n<p><strong>IN CONSIDERATION OF </strong><span style=\"font-weight: 400;\">the provisions contained in this Agreement and for other good and valuable&nbsp; consideration, the receipt and sufficiency of which is acknowledged, the parties agree as follows:&nbsp;&nbsp;</span></p>\n<p><strong>Licence</strong><strong>&nbsp;</strong></p>\n<ol>\n<li><span style=\"font-weight: 400;\"> Under this Agreement the Vendor grants to the Licensee a non-exclusive and non-transferable&nbsp; licence (the \"Licence\") to use Vertex360 (the \"Software\").&nbsp;</span></li>\n<li><span style=\"font-weight: 400;\"> \"Software\" includes the executable computer programs and any related printed, electronic and&nbsp; online documentation and any other files that may accompany the product.&nbsp;</span></li>\n<li><span style=\"font-weight: 400;\"> Title, copyright, intellectual property rights and distribution rights of the Software remain&nbsp; exclusively with the Vendor. Intellectual property rights include the look and feel of the Software.&nbsp; This Agreement constitutes a licence for use only and is not in any way a transfer of ownership&nbsp; rights to the Software.</span></li>\n<li><span style=\"font-weight: 400;\"> The Software may be loaded onto no more than one computer. A single copy may be made for&nbsp; backup purposes only.&nbsp;</span></li>\n<li><span style=\"font-weight: 400;\"> The rights and obligations of this Agreement are personal rights granted to the Licensee only. The&nbsp; Licensee may not transfer or assign any of the rights or obligations granted under this Agreement&nbsp; to any other person or legal entity. The Licensee may not make available the Software for use by&nbsp; one or more third parties.&nbsp;</span></li>\n<li><span style=\"font-weight: 400;\"> The Software may not be modified, reverse-engineered, or de-compiled in any manner through&nbsp; current or future available technologies.&nbsp;</span></li>\n<li><span style=\"font-weight: 400;\"> Failure to comply with any of the terms under the Licence section will be considered a material&nbsp; breach of this Agreement.&nbsp;</span></li>\n</ol>\n<p><strong>Licence Fee</strong><strong>&nbsp;</strong></p>\n<ol start=\"8\">\n<li><span style=\"font-weight: 400;\"> The licence fee for this Agreement will consist of:</span></li>\n</ol>\n<table border=\"1\">\n<tbody>\n<tr>\n<td style=\"text-align: center;\">\n<p><strong>Item&nbsp;</strong></p>\n</td>\n<td style=\"text-align: center;\">\n<p><strong>Fee GST exclusive</strong></p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">\n<p><span style=\"font-weight: 400;\">Setup cost&nbsp;</span></p>\n</td>\n<td style=\"text-align: center;\">\n<p><span style=\"font-weight: 400;\">$495 (one off)</span></p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">\n<p><span style=\"font-weight: 400;\">Data Migration (optional)&nbsp;</span></p>\n</td>\n<td style=\"text-align: center;\">\n<p><span style=\"font-weight: 400;\">$39 per participant file&nbsp;</span></p>\n<p><span style=\"font-weight: 400;\">$19 per staff file</span></p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">\n<p><span style=\"font-weight: 400;\">Monthly license fees&nbsp;</span></p>\n</td>\n<td style=\"text-align: center;\">\n<p><span style=\"font-weight: 400;\">$5 per active participant</span></p>\n</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\">\n<p><span style=\"font-weight: 400;\">Monthly hosting (Dedicated hosting only)&nbsp;</span></p>\n</td>\n<td style=\"text-align: center;\">\n<p><span style=\"font-weight: 400;\">$80 per month</span></p>\n</td>\n</tr>\n<tr>\n<td>&nbsp;</td>\n<td>&nbsp;</td>\n</tr>\n</tbody>\n</table>\n<p><br><br><br></p>\n<p><strong>Limitation of Liability</strong><strong>&nbsp;</strong></p>\n<ol start=\"9\">\n<li><span style=\"font-weight: 400;\"> The Software is provided by the Vendor and accepted by the Licensee \"as is\". Liability of the&nbsp; Vendor will be limited to a maximum of the original purchase price of the Software. The Vendor&nbsp; will not be liable for any general, special, incidental or consequential damages including, but not&nbsp; limited to, loss of production, loss of profits, loss of revenue, loss of data, or any other business or&nbsp; economic disadvantage suffered by the Licensee arising out of the use or failure to use the&nbsp; Software.&nbsp;</span></li>\n<li><span style=\"font-weight: 400;\"> The Vendor makes no warranty expressed or implied regarding the fitness of the Software for a&nbsp; particular purpose or that the Software will be suitable or appropriate for the specific requirements&nbsp; of the Licensee.&nbsp;</span></li>\n<li><span style=\"font-weight: 400;\"> The Vendor does not warrant that use of the Software will be uninterrupted or error-free. The&nbsp; Licensee accepts that software in general is prone to bugs and flaws within an acceptable level as&nbsp; determined in the industry.&nbsp;</span></li>\n</ol>\n<p><strong>Warrants and Representations</strong><strong>&nbsp;</strong></p>\n<ol start=\"12\">\n<li><span style=\"font-weight: 400;\"> The Vendor warrants and represents that it is the copyright holder of the Software. The Vendor&nbsp; warrants and represents that granting the licence to use this Software is not in violation of any&nbsp; other agreement, copyright or applicable statute.&nbsp;</span></li>\n</ol>\n<p><strong>Acceptance</strong><strong>&nbsp;</strong></p>\n<ol start=\"13\">\n<li><span style=\"font-weight: 400;\"> All terms, conditions and obligations of this Agreement will be deemed to be accepted by the&nbsp; Licensee (\"Acceptance\") upon execution of this Agreement.&nbsp;</span></li>\n</ol>\n<p><strong>User Support</strong><strong>&nbsp;</strong></p>\n<ol start=\"14\">\n<li><span style=\"font-weight: 400;\"> The Licensee will be entitled to 24 months of Email and Phone support available 09:00 am - 05:00&nbsp; pm Working Weekdays only, at no additional cost.&nbsp;</span></li>\n<li><span style=\"font-weight: 400;\"> The Licensee will be entitled to maintenance upgrades and bug fixes, at no additional cost, for a&nbsp; period of 24 months from the date of Acceptance.&nbsp;</span></li>\n</ol>\n<p><strong>Term</strong><strong>&nbsp;</strong></p>\n<ol start=\"16\">\n<li><span style=\"font-weight: 400;\"> The term of this Agreement will begin on Acceptance and will continue for a period of 24 months.&nbsp; At the end of the term of this Agreement the Licensee must destroy all copies of the Software in&nbsp; their possession.</span></li>\n</ol>\n<p>&nbsp;</p>\n<p><strong>Termination</strong><strong>&nbsp;</strong></p>\n<ol start=\"17\">\n<li><span style=\"font-weight: 400;\"> This Agreement will be terminated and the Licence forfeited where the Licensee has failed to&nbsp; comply with any of the terms of this Agreement or is in breach of this Agreement. On termination&nbsp; of this Agreement for any reason, the Licensee will promptly destroy the Software or return the&nbsp; Software to the Vendor.&nbsp;</span></li>\n</ol>\n<p><strong>Force Majeure</strong><strong>&nbsp;</strong></p>\n<ol start=\"18\">\n<li><span style=\"font-weight: 400;\"> The Vendor will be free of liability to the Licensee where the Vendor is prevented from executing&nbsp; its obligations under this Agreement in whole or in part due to Force Majeure, such as earthquake,&nbsp; typhoon, flood, fire, and war or any other unforeseen and uncontrollable event where the Vendor&nbsp; has taken any and all appropriate action to mitigate such an event.&nbsp;</span></li>\n</ol>\n<p><strong>Additional Clauses</strong><strong>&nbsp;</strong></p>\n<ol start=\"19\">\n<li><span style=\"font-weight: 400;\"> Data Backup: Certain data stored in Vertex360 is backed up once a week in raw form. In case of&nbsp; data loss, only the backed up data can be recovered.&nbsp;</span></li>\n<li><span style=\"font-weight: 400;\"> Data Loss: The licensee redeems Vertex 360 Software Solutions of any claims against data loss.&nbsp; The licensee is advised to attain their own cyber attack insurance to insure their business against&nbsp; data loss.&nbsp;</span></li>\n<li><span style=\"font-weight: 400;\"> Privacy Breach: The licensee redeems Vertex 360 Software Solutions of any claims against privacy breaches.&nbsp;&nbsp;</span></li>\n</ol>\n<p><strong>Governing Law</strong><strong>&nbsp;</strong></p>\n<ol start=\"22\">\n<li><span style=\"font-weight: 400;\"> The Parties to this Agreement submit to the jurisdiction of the courts of the State of Victoria for the&nbsp; enforcement of this Agreement or any arbitration award or decision arising from this Agreement.&nbsp; This Agreement will be enforced or construed according to the laws of the State of Victoria.&nbsp;</span></li>\n</ol>\n<p><strong>Miscellaneous</strong><strong>&nbsp;</strong></p>\n<ol start=\"23\">\n<li><span style=\"font-weight: 400;\"> This Agreement can only be modified in writing signed by both the Vendor and the Licensee.&nbsp;</span></li>\n<li><span style=\"font-weight: 400;\"> This Agreement does not create or imply any relationship in agency or partnership between the&nbsp; Vendor and the Licensee.&nbsp;</span></li>\n<li><span style=\"font-weight: 400;\"> Headings are inserted for the convenience of the parties only and are not to be considered when&nbsp; interpreting this Agreement. Words in the singular mean and include the plural and vice versa.&nbsp;</span></li>\n</ol>\n<p><span style=\"font-weight: 400;\">Words in the masculine gender include the feminine gender and vice versa. Words in the neuter&nbsp; gender include the masculine gender and the feminine gender and vice versa.&nbsp;</span></p>\n<ol start=\"26\">\n<li><span style=\"font-weight: 400;\"> If any term, covenant, condition or provision of this Agreement is held by a court of competent&nbsp; jurisdiction to be invalid, void or unenforceable, it is the parties' intent that such provision be&nbsp; reduced in scope by the court only to the extent deemed necessary by that court to render the&nbsp; provision reasonable and enforceable and the remainder of the provisions of this Agreement will in&nbsp; no way be affected, impaired or invalidated as a result.&nbsp;</span></li>\n<li><span style=\"font-weight: 400;\"> This Agreement contains the entire agreement between the parties. All understandings have been&nbsp; included in this Agreement. Representations which may have been made by any party to this&nbsp; Agreement may in some way be inconsistent with this final written Agreement. All such&nbsp; statements are declared to be of no value in this Agreement. Only the written terms of this&nbsp; Agreement will bind the parties.&nbsp;</span></li>\n<li><span style=\"font-weight: 400;\"> This Agreement and the terms and conditions contained in this Agreement apply to and are binding&nbsp; upon the Vendor's successors and assigns.&nbsp;</span></li>\n</ol>\n<p><strong>Notices</strong><strong>&nbsp;</strong></p>\n<ol start=\"29\">\n<li><span style=\"font-weight: 400;\"> All notices to the parties under this Agreement are to be provided at the following addresses, or at&nbsp; such addresses as may be later provided in writing:&nbsp;</span></li>\n</ol>\n<p><span style=\"font-weight: 400;\">Vertex 360 Software Solutions Pty Ltd: Unit 30, 22-30 Wallace Avenue Point Cook 3030 VIC&nbsp;</span></p>"
+  },
+  {
+   "fieldname": "html_7",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "html_9",
+   "fieldtype": "HTML",
+   "options": "<h5 style=\"text-align: center;\"> Vertex 360 Software Solutions Pty Ltd</h5><h5></h5>"
+  },
+  {
+   "fieldname": "signature_10",
+   "fieldtype": "Signature"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "html_12",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "signature_13",
+   "fieldtype": "Signature"
+  },
+  {
+   "depends_on": "eval:frappe.user.has_role('System Manager')",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Customer",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-08-21 09:54:01.368613",
+ "modified_by": "Administrator",
+ "module": "CRM",
+ "name": "Software Licence Agreement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

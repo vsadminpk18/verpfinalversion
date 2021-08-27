@@ -1,0 +1,298 @@
+verp.patches.v12_0.update_is_cancelled_field
+verp.patches.v11_0.rename_production_order_to_work_order
+verp.patches.v11_0.refactor_naming_series
+verp.patches.v11_0.refactor_autoname_naming
+execute:frappe.reload_doc("accounts", "doctype", "POS Payment Method") #2020-05-28
+execute:frappe.reload_doc("HR", "doctype", "HR Settings") #2020-01-16 #2020-07-24
+verp.patches.v4_2.update_requested_and_ordered_qty #2021-03-31
+verp.patches.v5_7.update_item_description_based_on_item_master
+verp.patches.v4_2.repost_reserved_qty #2021-03-31
+execute:frappe.reload_doc("Payroll", "doctype", "salary_slip")
+verp.patches.v8_1.setup_gst_india #2017-06-27
+verp.patches.v8_1.removed_roles_from_gst_report_non_indian_account #16-08-2018
+verp.patches.v8_7.sync_india_custom_fields
+verp.patches.v10_0.fichier_des_ecritures_comptables_for_france
+verp.patches.v10_0.rename_price_to_rate_in_pricing_rule
+verp.patches.v10_0.set_currency_in_pricing_rule
+verp.patches.v10_0.update_translatable_fields
+verp.patches.v10_0.rename_offer_letter_to_job_offer
+execute:frappe.delete_doc('DocType', 'Production Planning Tool', ignore_missing=True)
+verp.patches.v10_0.migrate_daily_work_summary_settings_to_daily_work_summary_group # 24-12-2018
+verp.patches.v10_0.add_default_cash_flow_mappers
+verp.patches.v11_0.rename_duplicate_item_code_values
+verp.patches.v11_0.make_quality_inspection_template
+verp.patches.v11_0.merge_land_unit_with_location
+verp.patches.v11_0.add_index_on_nestedset_doctypes
+verp.patches.v11_0.remove_modules_setup_page
+verp.patches.v11_0.move_leave_approvers_from_employee #13-06-2018
+verp.patches.v11_0.update_department_lft_rgt
+verp.patches.v11_0.add_default_email_template_for_leave
+verp.patches.v11_0.set_default_email_template_in_hr #08-06-2018
+verp.patches.v11_0.uom_conversion_data #30-06-2018
+verp.patches.v11_0.update_account_type_in_party_type
+verp.patches.v11_0.rename_healthcare_doctype_and_fields
+verp.patches.v11_0.rename_supplier_type_to_supplier_group
+verp.patches.v10_1.transfer_subscription_to_auto_repeat
+verp.patches.v11_0.update_brand_in_item_price
+verp.patches.v11_0.create_default_success_action
+verp.patches.v11_0.add_healthcare_service_unit_tree_root
+verp.patches.v11_0.rename_field_max_days_allowed
+verp.patches.v11_0.create_salary_structure_assignments
+verp.patches.v11_0.rename_health_insurance
+verp.patches.v11_0.rebuild_tree_for_company
+verp.patches.v11_0.create_department_records_for_each_company
+verp.patches.v11_0.make_location_from_warehouse
+verp.patches.v11_0.make_asset_finance_book_against_old_entries
+verp.patches.v11_0.check_buying_selling_in_currency_exchange
+verp.patches.v11_0.move_item_defaults_to_child_table_for_multicompany #02-07-2018 #19-06-2019
+verp.patches.v11_0.refactor_verp_shopify #2018-09-07
+verp.patches.v11_0.rename_overproduction_percent_field
+verp.patches.v11_0.update_backflush_subcontract_rm_based_on_bom
+verp.patches.v11_0.inter_state_field_for_gst
+verp.patches.v11_0.rename_members_with_naming_series #04-06-2018
+verp.patches.v11_0.set_update_field_and_value_in_workflow_state
+verp.patches.v11_0.update_total_qty_field
+verp.patches.v11_0.update_sales_partner_type
+verp.patches.v11_0.rename_asset_adjustment_doctype
+verp.patches.v11_0.set_salary_component_properties
+verp.patches.v11_0.set_user_permissions_for_department
+verp.patches.v11_0.hr_ux_cleanups
+verp.patches.v11_0.skip_user_permission_check_for_department
+verp.patches.v11_0.set_department_for_doctypes
+verp.patches.v11_0.update_allow_transfer_for_manufacture
+verp.patches.v11_0.add_item_group_defaults
+verp.patches.v11_0.add_expense_claim_default_account
+execute:frappe.delete_doc("Page", "hub")
+verp.patches.v11_0.reset_publish_in_hub_for_all_items
+verp.patches.v11_0.update_hub_url # 2018-08-31  # 2018-09-03
+verp.patches.v11_0.make_job_card
+verp.patches.v11_0.redesign_healthcare_billing_work_flow
+verp.patches.v10_0.delete_hub_documents # 12-08-2018
+verp.patches.v11_0.rename_healthcare_fields
+verp.patches.v11_0.add_default_dispatch_notification_template
+verp.patches.v11_0.add_market_segments
+verp.patches.v11_0.add_sales_stages
+execute:frappe.delete_doc_if_exists("Page", "sales-analytics")
+execute:frappe.delete_doc_if_exists("Page", "purchase-analytics")
+execute:frappe.delete_doc_if_exists("Page", "stock-analytics")
+execute:frappe.delete_doc_if_exists("Page", "production-analytics")
+verp.patches.v11_0.ewaybill_fields_gst_india #2018-11-13 #2019-01-09 #2019-04-01 #2019-04-26 #2019-05-03
+verp.patches.v11_0.drop_column_max_days_allowed
+verp.patches.v10_0.item_barcode_childtable_migrate # 16-02-2019
+verp.patches.v11_0.update_delivery_trip_status
+verp.patches.v11_0.set_missing_gst_hsn_code
+verp.patches.v11_0.rename_bom_wo_fields
+verp.patches.v12_0.set_default_homepage_type
+verp.patches.v11_0.rename_additional_salary_component_additional_salary
+verp.patches.v11_0.renamed_from_to_fields_in_project
+verp.patches.v11_0.add_permissions_in_gst_settings #2020-04-04
+verp.patches.v11_1.setup_guardian_role
+execute:frappe.delete_doc('DocType', 'Notification Control')
+verp.patches.v12_0.set_gst_category
+verp.patches.v12_0.update_gst_category
+verp.patches.v11_0.remove_barcodes_field_from_copy_fields_to_variants
+verp.patches.v12_0.set_task_status
+verp.patches.v11_0.make_italian_localization_fields # 26-03-2019
+verp.patches.v12_0.add_item_name_in_work_orders
+verp.patches.v12_0.update_pricing_rule_fields
+verp.patches.v11_1.make_job_card_time_logs
+verp.patches.v12_0.rename_pricing_rule_child_doctypes
+verp.patches.v12_0.move_target_distribution_from_parent_to_child
+verp.patches.v12_0.stock_entry_enhancements
+verp.patches.v10_0.item_barcode_childtable_migrate # 16-02-2019 #25-06-2019
+verp.patches.v12_0.make_item_manufacturer
+verp.patches.v12_0.move_item_tax_to_item_tax_template
+verp.patches.v11_1.set_variant_based_on
+verp.patches.v11_1.woocommerce_set_creation_user
+verp.patches.v11_1.set_salary_details_submittable
+verp.patches.v11_1.rename_depends_on_lwp
+execute:frappe.delete_doc("Report", "Inactive Items")
+verp.patches.v11_1.delete_scheduling_tool
+verp.patches.v12_0.rename_tolerance_fields
+execute:frappe.delete_doc_if_exists("Page", "support-analytics")
+verp.patches.v12_0.remove_patient_medical_record_page
+verp.patches.v11_1.move_customer_lead_to_dynamic_column
+verp.patches.v11_1.set_default_action_for_quality_inspection
+verp.patches.v11_1.delete_bom_browser
+verp.patches.v11_1.set_missing_title_for_quotation
+verp.patches.v11_1.update_bank_transaction_status
+verp.patches.v11_1.renamed_delayed_item_report
+verp.patches.v11_1.set_missing_opportunity_from
+verp.patches.v12_0.set_quotation_status
+verp.patches.v12_0.set_priority_for_support
+verp.patches.v12_0.delete_priority_property_setter
+verp.patches.v12_0.set_default_batch_size
+execute:frappe.delete_doc("DocType", "Project Task")
+verp.patches.v11_1.update_default_supplier_in_item_defaults
+verp.patches.v12_0.update_due_date_in_gle
+verp.patches.v12_0.add_default_buying_selling_terms_in_company
+verp.patches.v12_0.update_ewaybill_field_position
+verp.patches.v12_0.create_accounting_dimensions_in_missing_doctypes #2020-05-11
+verp.patches.v11_1.set_status_for_material_request_type_manufacture
+verp.patches.v12_0.move_plaid_settings_to_doctype
+execute:frappe.reload_doc('desk', 'doctype', 'dashboard_chart_link')
+execute:frappe.reload_doc('desk', 'doctype', 'dashboard')
+execute:frappe.reload_doc('desk', 'doctype', 'dashboard_chart_source')
+execute:frappe.reload_doc('desk', 'doctype', 'dashboard_chart')
+execute:frappe.reload_doc('desk', 'doctype', 'dashboard_chart_field')
+verp.patches.v12_0.remove_bank_remittance_custom_fields
+verp.patches.v12_0.generate_leave_ledger_entries #04-11-2020
+execute:frappe.delete_doc_if_exists("Report", "Loan Repayment")
+verp.patches.v12_0.move_credit_limit_to_customer_credit_limit
+verp.patches.v12_0.add_variant_of_in_item_attribute_table
+verp.patches.v12_0.rename_bank_account_field_in_journal_entry_account
+verp.patches.v12_0.create_default_energy_point_rules
+verp.patches.v12_0.set_produced_qty_field_in_sales_order_for_work_order
+verp.patches.v12_0.set_default_shopify_app_type
+verp.patches.v12_0.set_cwip_and_delete_asset_settings
+verp.patches.v12_0.set_expense_account_in_landed_cost_voucher_taxes
+verp.patches.v12_0.replace_accounting_with_accounts_in_home_settings
+verp.patches.v12_0.set_automatically_process_deferred_accounting_in_accounts_settings
+verp.patches.v12_0.set_payment_entry_status
+verp.patches.v12_0.update_owner_fields_in_acc_dimension_custom_fields
+verp.patches.v12_0.add_export_type_field_in_party_master
+verp.patches.v12_0.remove_denied_leaves_from_leave_ledger
+verp.patches.v12_0.update_price_or_product_discount
+verp.patches.v12_0.set_production_capacity_in_workstation
+verp.patches.v12_0.set_employee_preferred_emails
+verp.patches.v12_0.set_against_blanket_order_in_sales_and_purchase_order
+verp.patches.v12_0.set_cost_center_in_child_table_of_expense_claim
+verp.patches.v12_0.add_eway_bill_in_delivery_note
+verp.patches.v12_0.set_lead_title_field
+verp.patches.v12_0.set_permission_einvoicing
+verp.patches.v12_0.set_published_in_hub_tracked_item
+verp.patches.v12_0.set_job_offer_applicant_email
+verp.patches.v12_0.create_irs_1099_field_united_states
+verp.patches.v12_0.move_bank_account_swift_number_to_bank
+verp.patches.v12_0.rename_bank_reconciliation
+verp.patches.v12_0.rename_bank_reconciliation_fields # 2020-01-22
+verp.patches.v12_0.set_purchase_receipt_delivery_note_detail
+verp.patches.v12_0.add_permission_in_lower_deduction
+verp.patches.v12_0.set_received_qty_in_material_request_as_per_stock_uom
+verp.patches.v12_0.rename_account_type_doctype
+verp.patches.v12_0.recalculate_requested_qty_in_bin
+verp.patches.v12_0.update_healthcare_refactored_changes
+verp.patches.v12_0.set_total_batch_quantity
+verp.patches.v12_0.rename_mws_settings_fields
+verp.patches.v12_0.set_updated_purpose_in_pick_list
+verp.patches.v12_0.set_default_payroll_based_on
+verp.patches.v12_0.repost_stock_ledger_entries_for_target_warehouse
+verp.patches.v12_0.update_end_date_and_status_in_email_campaign
+verp.patches.v13_0.move_tax_slabs_from_payroll_period_to_income_tax_slab #123
+verp.patches.v12_0.fix_quotation_expired_status
+verp.patches.v12_0.update_appointment_reminder_scheduler_entry
+verp.patches.v12_0.rename_pos_closing_doctype
+verp.patches.v13_0.replace_pos_payment_mode_table #2020-12-29
+verp.patches.v12_0.remove_duplicate_leave_ledger_entries #2020-05-22
+verp.patches.v13_0.patch_to_fix_reverse_linking_in_additional_salary_encashment_and_incentive
+execute:frappe.reload_doc("HR", "doctype", "Employee Advance")
+verp.patches.v12_0.move_due_advance_amount_to_pending_amount
+execute:frappe.delete_doc_if_exists("Page", "appointment-analytic")
+execute:frappe.rename_doc("Desk Page", "Getting Started", "Home", force=True)
+verp.patches.v12_0.unset_customer_supplier_based_on_type_of_item_price
+verp.patches.v12_0.set_valid_till_date_in_supplier_quotation
+verp.patches.v13_0.update_old_loans
+verp.patches.v12_0.set_serial_no_status #2020-05-21
+verp.patches.v12_0.update_price_list_currency_in_bom
+execute:frappe.reload_doctype('Dashboard')
+execute:frappe.reload_doc('desk', 'doctype', 'number_card_link')
+execute:frappe.delete_doc_if_exists('Dashboard', 'Accounts')
+verp.patches.v13_0.update_actual_start_and_end_date_in_wo
+verp.patches.v13_0.set_company_field_in_healthcare_doctypes #2021-04-16
+verp.patches.v12_0.update_bom_in_so_mr
+execute:frappe.delete_doc("Report", "Department Analytics")
+execute:frappe.rename_doc("Desk Page", "Loan Management", "Loan", force=True)
+verp.patches.v12_0.update_uom_conversion_factor
+verp.patches.v13_0.replace_pos_page_with_point_of_sale_page
+verp.patches.v13_0.delete_old_purchase_reports
+verp.patches.v12_0.set_italian_import_supplier_invoice_permissions
+verp.patches.v13_0.update_subscription
+verp.patches.v12_0.unhide_cost_center_field
+verp.patches.v13_0.update_sla_enhancements
+verp.patches.v12_0.update_address_template_for_india
+verp.patches.v13_0.update_deferred_settings
+verp.patches.v12_0.set_multi_uom_in_rfq
+verp.patches.v13_0.delete_old_sales_reports
+execute:frappe.delete_doc_if_exists("DocType", "Bank Reconciliation")
+verp.patches.v13_0.move_doctype_reports_and_notification_from_hr_to_payroll #22-06-2020
+verp.patches.v13_0.move_payroll_setting_separately_from_hr_settings #22-06-2020
+execute:frappe.reload_doc("regional", "doctype", "e_invoice_settings")
+verp.patches.v13_0.check_is_income_tax_component #22-06-2020
+verp.patches.v13_0.loyalty_points_entry_for_pos_invoice #22-07-2020
+verp.patches.v12_0.add_taxjar_integration_field
+verp.patches.v12_0.fix_percent_complete_for_projects
+verp.patches.v13_0.delete_report_requested_items_to_order
+verp.patches.v12_0.update_item_tax_template_company
+verp.patches.v13_0.move_branch_code_to_bank_account
+verp.patches.v13_0.healthcare_lab_module_rename_doctypes
+verp.patches.v13_0.add_standard_navbar_items #2021-03-24
+verp.patches.v13_0.stock_entry_enhancements
+verp.patches.v12_0.update_state_code_for_daman_and_diu
+verp.patches.v12_0.rename_lost_reason_detail
+verp.patches.v13_0.drop_razorpay_payload_column
+verp.patches.v13_0.update_start_end_date_for_old_shift_assignment
+verp.patches.v13_0.setting_custom_roles_for_some_regional_reports
+verp.patches.v13_0.rename_issue_doctype_fields
+verp.patches.v13_0.change_default_pos_print_format
+verp.patches.v13_0.set_youtube_video_id
+verp.patches.v13_0.set_app_name
+verp.patches.v13_0.print_uom_after_quantity_patch
+verp.patches.v13_0.set_payment_channel_in_payment_gateway_account
+verp.patches.v13_0.create_healthcare_custom_fields_in_stock_entry_detail
+verp.patches.v12_0.setup_einvoice_fields #2020-12-02
+verp.patches.v13_0.updates_for_multi_currency_payroll
+verp.patches.v13_0.update_reason_for_resignation_in_employee
+execute:frappe.delete_doc("Report", "Quoted Item Comparison")
+verp.patches.v13_0.update_member_email_address
+verp.patches.v13_0.update_custom_fields_for_shopify
+verp.patches.v13_0.updates_for_multi_currency_payroll
+verp.patches.v13_0.create_leave_policy_assignment_based_on_employee_current_leave_policy
+verp.patches.v13_0.update_pos_closing_entry_in_merge_log
+verp.patches.v13_0.add_po_to_global_search
+verp.patches.v13_0.update_returned_qty_in_pr_dn
+execute:frappe.rename_doc("Workspace", "Loan", "Loan Management", ignore_if_exists=True, force=True)
+verp.patches.v13_0.create_uae_pos_invoice_fields
+verp.patches.v13_0.update_project_template_tasks
+verp.patches.v13_0.set_company_in_leave_ledger_entry
+verp.patches.v13_0.convert_qi_parameter_to_link_field
+verp.patches.v13_0.setup_patient_history_settings_for_standard_doctypes
+verp.patches.v13_0.add_naming_series_to_old_projects # 1-02-2021
+verp.patches.v13_0.update_payment_terms_outstanding
+verp.patches.v12_0.add_state_code_for_ladakh
+verp.patches.v13_0.item_reposting_for_incorrect_sl_and_gl
+verp.patches.v13_0.delete_old_bank_reconciliation_doctypes
+verp.patches.v12_0.update_vehicle_no_reqd_condition
+verp.patches.v12_0.add_einvoice_status_field #2021-03-17
+verp.patches.v12_0.add_einvoice_summary_report_permissions
+verp.patches.v13_0.setup_fields_for_80g_certificate_and_donation
+verp.patches.v13_0.rename_membership_settings_to_non_profit_settings
+verp.patches.v13_0.setup_gratuity_rule_for_india_and_uae
+verp.patches.v13_0.setup_uae_vat_fields
+execute:frappe.db.set_value('System Settings', None, 'app_name', 'VERP')
+verp.patches.v12_0.add_company_link_to_einvoice_settings
+verp.patches.v13_0.rename_discharge_date_in_ip_record
+verp.patches.v12_0.create_taxable_value_field
+verp.patches.v12_0.add_gst_category_in_delivery_note
+verp.patches.v12_0.purchase_receipt_status
+verp.patches.v12_0.create_itc_reversal_custom_fields
+verp.patches.v13_0.fix_non_unique_represents_company
+verp.patches.v12_0.add_document_type_field_for_italy_einvoicing
+verp.patches.v13_0.make_non_standard_user_type #13-04-2021
+verp.patches.v13_0.update_shipment_status
+verp.patches.v13_0.remove_attribute_field_from_item_variant_setting
+verp.patches.v12_0.add_ewaybill_validity_field
+verp.patches.v13_0.germany_make_custom_fields
+verp.patches.v13_0.germany_fill_debtor_creditor_number
+verp.patches.v13_0.set_pos_closing_as_failed
+execute:frappe.rename_doc("Workspace", "Loan Management", "Loans", force=True)
+verp.patches.v13_0.update_timesheet_changes
+verp.patches.v13_0.add_doctype_to_sla #14-06-2021
+verp.patches.v13_0.set_training_event_attendance
+verp.patches.v13_0.bill_for_rejected_quantity_in_purchase_invoice
+verp.patches.v13_0.rename_issue_status_hold_to_on_hold
+verp.patches.v13_0.update_response_by_variance
+verp.patches.v13_0.bill_for_rejected_quantity_in_purchase_invoice
+verp.patches.v13_0.update_job_card_details
+verp.patches.v13_0.update_level_in_bom #1234sswef
+verp.patches.v13_0.add_missing_fg_item_for_stock_entry
+verp.patches.v13_0.update_subscription_status_in_memberships
